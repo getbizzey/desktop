@@ -1,19 +1,65 @@
 {
-  "name": "bizzey-desktop",
+  "name": "bizzey",
+  "productName": "bizzey",
   "version": "1.0.0",
-  "description": "All-in online facturatie software",
-  "main": "index.js",
+  "description": "Smart facturatie software",
+  "main": "src/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "lint": "echo \"No linting configured\""
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://gitlab.com/PixelLab_/bizzey-desktop.git"
+  "keywords": [],
+  "author": {
+    "name": "bizzey",
+    "email": "info@bizzey.be"
   },
-  "author": "Bizzey",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://gitlab.com/PixelLab_/bizzey-desktop/issues"
+  "license": "MIT",
+  "config": {
+    "forge": {
+      "packagerConfig": {
+        "icon": "./src/images/icons/icon"
+      },
+      "makers": [
+        {
+          "name": "@electron-forge/maker-squirrel",
+          "config": {
+            "name": "bizzey"
+          }
+        },
+        {
+          "name": "@electron-forge/maker-zip",
+          "platforms": [
+            "darwin"
+          ]
+        },
+        {
+          "name": "@electron-forge/maker-deb",
+          "config": {
+            "options": {
+              "maintainer": "Bizzey",
+              "homepage": "https://www.bizzey.be"
+            }
+          }
+        },
+        {
+          "name": "@electron-forge/maker-rpm",
+          "config": {}
+        }
+      ]
+    }
   },
-  "homepage": "https://gitlab.com/PixelLab_/bizzey-desktop#readme"
+  "dependencies": {
+    "electron-squirrel-startup": "^1.0.0"
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "6.0.0-beta.43",
+    "@electron-forge/maker-deb": "6.0.0-beta.43",
+    "@electron-forge/maker-rpm": "6.0.0-beta.43",
+    "@electron-forge/maker-squirrel": "6.0.0-beta.43",
+    "@electron-forge/maker-zip": "6.0.0-beta.43",
+    "electron": "6.0.0"
+  }
 }
