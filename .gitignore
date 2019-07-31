@@ -1,0 +1,7 @@
+releases/linux
+releases/mac
+releases/windows
+
+!releases/linux/.gitkeep
+!releases/mac/.gitkeep
+!releases/windows/.gitkeep

@@ -1,0 +1,19 @@
+{
+  "name": "bizzey-desktop",
+  "version": "1.0.0",
+  "description": "All-in online facturatie software",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/PixelLab_/bizzey-desktop.git"
+  },
+  "author": "Bizzey",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/PixelLab_/bizzey-desktop/issues"
+  },
+  "homepage": "https://gitlab.com/PixelLab_/bizzey-desktop#readme"
+}
