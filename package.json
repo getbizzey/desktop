@@ -37,6 +37,9 @@
         },
         {
           "name": "@electron-forge/maker-deb",
+          "platforms": [
+            "darwin"
+          ],
           "config": {
             "options": {
               "maintainer": "Bizzey",
@@ -46,6 +49,9 @@
         },
         {
           "name": "@electron-forge/maker-rpm",
+          "platforms": [
+            "darwin"
+          ],
           "config": {}
         }
       ]

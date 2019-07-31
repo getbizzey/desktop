@@ -1,0 +1,4 @@
+#! /bin/sh
+
+yarn make --arch="ia32" --platform="win32"
+yarn make --arch="x64" --platform="win32"
