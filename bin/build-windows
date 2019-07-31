@@ -1,0 +1,13 @@
+#!/bin/zsh
+
+nativefier \
+--name "Bizzey" \
+--platform windows \
+--app-copyright "Bizzey" \
+--fast-quit \
+--disable-context-menu \
+--disable-dev-tools \
+--single-instance \
+--icon ./icons/windows/icon.ico \
+https://www.bizzey.be/app \
+./releases/windows
