@@ -1,4 +1,10 @@
 const { app, BrowserWindow, Menu } = require('electron');
+const electronDl = require('electron-dl');
+
+electronDl({
+  openFolderWhenDone: true
+})
+
 
 // Remove application menu
 Menu.setApplicationMenu(null);
