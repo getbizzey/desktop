@@ -1,0 +1,10 @@
+#! /bin/sh
+
+# Install electron forge
+npm install -g electron-forge electron-installer-debian
+
+# Install dependencies
+yarn install
+
+# Install brewed dependencies
+brew install dpkg fakeroot rpm
