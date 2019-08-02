@@ -1,4 +1,4 @@
 #! /bin/zsh
 
-electron-forge package --platform=darwin --arch=x64
+yarn make --platform=darwin --arch=x64
 

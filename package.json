@@ -1,8 +1,8 @@
 {
-  "name": "bizzey",
-  "productName": "bizzey",
+  "name": "Bizzey",
+  "productName": "Bizzey",
   "version": "1.0.0",
-  "description": "Smart facturatie software",
+  "description": "Smart invoicing software",
   "main": "src/index.js",
   "scripts": {
     "start": "electron-forge start",
@@ -13,14 +13,14 @@
   },
   "keywords": [],
   "author": {
-    "name": "bizzey",
+    "name": "Bizzey",
     "email": "info@bizzey.be"
   },
   "license": "MIT",
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./src/images/icons/icon"
+        "icon": "./src/images/build/icons/icon"
       },
       "makers": [
         {
@@ -34,9 +34,6 @@
         },
         {
           "name": "@electron-forge/maker-deb",
-          "platforms": [
-            "darwin"
-          ],
           "config": {
             "options": {
               "maintainer": "Bizzey",
@@ -46,15 +43,22 @@
         },
         {
           "name": "@electron-forge/maker-rpm",
-          "platforms": [
-            "darwin"
-          ],
           "config": {}
+        },
+        {
+          "name": "@electron-forge/maker-dmg",
+          "config": {
+            "icon": "./src/images/build/icons/icon.icns",
+            "background": "./src/images/build/dmg/dmg-background.png",
+            "format": "ULFO",
+            "overwrite": true
+          }
         }
       ]
     }
   },
   "dependencies": {
+    "@electron-forge/maker-dmg": "^6.0.0-beta.43",
     "electron-dl": "^1.14.0",
     "electron-squirrel-startup": "^1.0.0"
   },
