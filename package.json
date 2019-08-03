@@ -1,5 +1,5 @@
 {
-  "name": "Bizzey",
+  "name": "bizzey",
   "productName": "Bizzey",
   "version": "1.0.0",
   "description": "Smart invoicing software",
@@ -20,7 +20,8 @@
   "config": {
     "forge": {
       "packagerConfig": {
-        "icon": "./src/images/build/icons/icon"
+        "icon": "./src/images/build/icons/icon",
+        "asar": true
       },
       "makers": [
         {
@@ -33,25 +34,16 @@
           "name": "@electron-forge/maker-zip"
         },
         {
-          "name": "@electron-forge/maker-deb",
-          "config": {
-            "options": {
-              "maintainer": "Bizzey",
-              "homepage": "https://www.bizzey.be"
-            }
-          }
-        },
-        {
-          "name": "@electron-forge/maker-rpm",
-          "config": {}
-        },
-        {
           "name": "@electron-forge/maker-dmg",
           "config": {
             "icon": "./src/images/build/icons/icon.icns",
             "background": "./src/images/build/dmg/dmg-background.png",
             "format": "ULFO",
-            "overwrite": true
+            "overwrite": true,
+            "contents": [
+              { "x": 209, "y": 270, "type": "file", "path": "/Users/null/Work/bizzey-desktop/out/Bizzey-darwin-x64/Bizzey.app" },
+              { "x": 450, "y": 270, "type": "link", "path": "/Applications" }
+            ]
           }
         }
       ]

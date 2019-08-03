@@ -1,6 +1,7 @@
 #! /bin/zsh
 
 # Build files
+yarn make --platform="linux" --arch="ia32"
 yarn make --platform="linux" --arch="x64"
 
 # Package to debian package
