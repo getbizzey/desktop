@@ -1,4 +1,11 @@
 {
+  "name": "Bizzey",
+  "productName": "Bizzey",
+  "author": {
+    "name": "Bizzey",
+    "email": "info@bizzey.com",
+    "url": "https://www.bizzey.com"
+  },
   "scripts": {
     "build": "yarn build:mac && yarn build:linux && yarn build:windows",
     "build:mac": "bin/build-mac",

@@ -1,12 +1,13 @@
 #!/bin/sh
 
-nativefier --name Bizzey \
+nativefier \
+--name Bizzey \
 --icon icons/icon.png \
 --platform windows \
 --single-instance \
 --file-download-options '{"saveAs": true}' \
---app-copyright Bizzey \
+--app-copyright "Bizzey" \
 --app-version 3.0.2 \
 --build-version 3.0.2 \
---win32metadata '{"ProductName": "Bizzey", "InternalName": "Bizzey", "FileDescription": "Track invoices, manage projects and automatically bill your customers."}' \
-"https://app.bizzey.com"
+"https://app.bizzey.com" \
+dist
