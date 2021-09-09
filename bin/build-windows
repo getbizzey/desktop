@@ -1,4 +1,12 @@
-#! /bin/sh
+#!/bin/sh
 
-yarn make --arch="ia32" --platform="win32"
-yarn make --arch="x64" --platform="win32"
+nativefier --name Bizzey \
+--icon icons/icon.png \
+--platform windows \
+--single-instance \
+--file-download-options '{"saveAs": true}' \
+--app-copyright Bizzey \
+--app-version 3.0.2 \
+--build-version 3.0.2 \
+--win32metadata '{"ProductName": "Bizzey", "InternalName": "Bizzey", "FileDescription": "Track invoices, manage projects and automatically bill your customers."}' \
+"https://app.bizzey.com"

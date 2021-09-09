@@ -1,8 +1,9 @@
-#! /bin/zsh
+#!/bin/sh
 
-# Build files
-yarn make --platform="linux" --arch="ia32"
-yarn make --platform="linux" --arch="x64"
-
-# Package to debian package
-electron-installer-debian --src out/bizzey-linux-x64/ --dest out/make/ --arch amd64
+nativefier --name Bizzey \
+--icon icons/icon.png \
+--platform linux \
+--single-instance \
+--file-download-options '{"saveAs": true}' \
+"https://app.bizzey.com" \
+dist

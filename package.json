@@ -1,65 +1,11 @@
 {
-  "name": "bizzey",
-  "productName": "Bizzey",
-  "version": "1.0.0",
-  "description": "Smart invoicing software",
-  "main": "src/index.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge publish",
-    "lint": "echo \"No linting configured\""
-  },
-  "keywords": [],
-  "author": {
-    "name": "Bizzey",
-    "email": "info@bizzey.be"
-  },
-  "license": "MIT",
-  "config": {
-    "forge": {
-      "packagerConfig": {
-        "icon": "./src/images/build/icons/icon",
-        "asar": true
-      },
-      "makers": [
-        {
-          "name": "@electron-forge/maker-squirrel",
-          "config": {
-            "name": "bizzey"
-          }
-        },
-        {
-          "name": "@electron-forge/maker-zip"
-        },
-        {
-          "name": "@electron-forge/maker-dmg",
-          "config": {
-            "icon": "./src/images/build/icons/icon.icns",
-            "background": "./src/images/build/dmg/dmg-background.png",
-            "format": "ULFO",
-            "overwrite": true,
-            "contents": [
-              { "x": 209, "y": 270, "type": "file", "path": "/Users/null/Work/bizzey-desktop/out/Bizzey-darwin-x64/Bizzey.app" },
-              { "x": 450, "y": 270, "type": "link", "path": "/Applications" }
-            ]
-          }
-        }
-      ]
-    }
+    "build": "yarn build:mac && yarn build:linux && yarn build:windows",
+    "build:mac": "bin/build-mac",
+    "build:linux": "bin/build-linux",
+    "build:windows": "bin/build-windows"
   },
   "dependencies": {
-    "@electron-forge/maker-dmg": "^6.0.0-beta.43",
-    "electron-dl": "^1.14.0",
-    "electron-squirrel-startup": "^1.0.0"
-  },
-  "devDependencies": {
-    "@electron-forge/cli": "6.0.0-beta.43",
-    "@electron-forge/maker-deb": "6.0.0-beta.43",
-    "@electron-forge/maker-rpm": "6.0.0-beta.43",
-    "@electron-forge/maker-squirrel": "6.0.0-beta.43",
-    "@electron-forge/maker-zip": "6.0.0-beta.43",
-    "electron": "6.0.0"
+    "nativefier": "^45.0.0"
   }
 }

@@ -1,4 +1,10 @@
-#! /bin/zsh
+#!/bin/sh
 
-yarn make --platform=darwin --arch=x64
-
+nativefier --name Bizzey \
+--icon icons/icon.icns \
+--platform osx \
+--single-instance \
+--file-download-options '{"saveAs": true}' \
+--fast-quit \
+"https://app.bizzey.com" \
+dist
